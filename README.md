@@ -44,7 +44,7 @@ python analysis.py
 - Console output with analysis results spanning 1997-98 through 2021-22 seasons
 - `team_performance.png` - Bar chart visualization saved in project root
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/bc_mlnQQ3Dg)
 
 # Data Analysis Results
 
