@@ -1,17 +1,48 @@
 # Overview
 
+AI Disclosure: AI assistance (Claude) was used to help improve grammar and ensure best practices in data analysis workflows. All analytical logic, code structure, question formulation, and interpretation of results represent original work.
+
 As a software engineer expanding my data analysis capabilities, I developed this Python-based analytical tool to explore NBA player performance patterns and team offensive strategies. This project allows me to apply statistical programming concepts while working with real-world sports data—combining my interests in technology and basketball analytics.
 
-The dataset I'm analyzing contains comprehensive NBA player statistics spanning multiple seasons, including metrics like points scored, games played, field goal percentages, rebounds, assists, and more. I obtained this data from Basketball Reference, which provides extensive historical NBA statistics. The dataset includes player-level data across different teams and seasons, enabling deep analysis of individual and team performance.
+The dataset I'm analyzing contains comprehensive NBA player statistics spanning from the 1997-98 season through the 2021-22 season (25 years of data), including metrics like points scored, games played, field goal percentages, rebounds, assists, and more. I obtained this data from [Kaggle - NBA Player Stats](https://www.kaggle.com/datasets/raunakpandey030/nba-player-stats?resource=download&select=NBA_Player_Stats.csv). The dataset includes player-level data across different teams and seasons, enabling deep analysis of individual and team performance trends across different eras of basketball.
 
-**Dataset Source:** Basketball Reference NBA Player Statistics  
+**Dataset Source:** [Kaggle - NBA Player Stats](https://www.kaggle.com/datasets/raunakpandey030/nba-player-stats?resource=download&select=NBA_Player_Stats.csv)
 **Data Format:** CSV with 31 columns including player demographics, team affiliations, and comprehensive performance metrics
 
-The purpose of this software is to answer critical questions about NBA performance:
+I created this software to answer critical questions about NBA performance:
 1. **Who are the top scoring players in NBA history (by total points in a season)?**
 2. **Which teams demonstrate the strongest offensive performance based on average points per game per player?**
 
 By developing this analytical tool, I'm strengthening my skills in data manipulation with Pandas, statistical analysis, and data visualization with Matplotlib—all essential capabilities for modern software engineering roles involving data-driven decision making.
+
+## Quick Setup (Run from Clean Clone)
+
+```bash
+# Clone the repository
+git clone https://github.com/YOUR_USERNAME/CSE310_NBA_Stats_Analysis.git
+cd CSE310_NBA_Stats_Analysis
+
+# Install required libraries
+# On Windows, if 'pip' is not recognized, use:
+python -m pip install pandas matplotlib numpy
+
+# On Mac/Linux, you can use:
+pip install pandas matplotlib numpy
+
+# Run the analysis
+python analysis.py
+```
+
+**Requirements:**
+- Python 3.7 or higher
+- Libraries: pandas, matplotlib, numpy
+- The `data/NBA_Player_Stats.csv` file must be in the data directory
+
+**Windows Users:** If you get "pip is not recognized" error, always use `python -m pip` instead of just `pip`.
+
+**Output:**
+- Console output with analysis results spanning 1997-98 through 2021-22 seasons
+- `team_performance.png` - Bar chart visualization saved in project root
 
 [Software Demo Video](http://youtube.link.goes.here)
 
@@ -56,49 +87,43 @@ This visualization makes it immediately clear which teams prioritize offensive p
 
 # Development Environment
 
-**Development Tools:**
-- **VS Code** - Primary code editor with Python extension
-- **Python 3.x** - Programming language for analysis
-- **Git/GitHub** - Version control and code repository hosting
-- **Terminal/Command Line** - Script execution and package management
+I developed this project using VS Code as my primary editor with the Python extension for syntax highlighting and debugging. The project uses Python 3.x with three key libraries: Pandas for data manipulation (loading CSV, filtering, sorting, grouping), Matplotlib for creating the bar chart visualization, and NumPy as a dependency for numerical operations.
 
-**Programming Language & Libraries:**
-- **Python 3.x** - Core programming language chosen for its robust data science ecosystem
-- **Pandas 2.x** - Data manipulation and analysis library for loading, cleaning, filtering, sorting, and aggregating the dataset
-- **Matplotlib 3.x** - Data visualization library for creating publication-quality charts and graphs
-- **NumPy** - Numerical computing library (dependency for Pandas calculations)
+**Tools:**
+- VS Code with Python extension
+- Python 3.14.2 (or 3.7+)
+- Git/GitHub for version control
 
-**Installation Commands:**
+**Libraries:**
+- Pandas 2.x - Data loading, cleaning, filtering, sorting, and aggregation
+- Matplotlib 3.x - Data visualization and chart generation
+- NumPy - Numerical computing support
+
+**Installation:**
 ```bash
+# Windows (if pip is not recognized):
+python -m pip install pandas matplotlib numpy
+
+# Mac/Linux:
 pip install pandas matplotlib numpy
 ```
 
 # Useful Websites
 
-* [Pandas Official Documentation](https://pandas.pydata.org/docs/) - Comprehensive guide for DataFrame operations, groupby aggregations, and data manipulation techniques
-* [Matplotlib Documentation](https://matplotlib.org/stable/contents.html) - Complete reference for creating visualizations, customizing plots, and chart formatting
-* [Basketball Reference](https://www.basketball-reference.com/) - Primary source for NBA statistics and historical data
-* [Kaggle NBA Datasets](https://www.kaggle.com/datasets?search=nba) - Alternative sources for NBA data and example analysis projects
-* [Real Python - Pandas Tutorial](https://realpython.com/pandas-python-explore-dataset/) - Practical tutorials for data analysis workflows
-* [Python Official Documentation](https://docs.python.org/3/) - Core Python language reference
+These resources were invaluable during development:
+
+* [Pandas Documentation](https://pandas.pydata.org/docs/) - Essential for understanding DataFrame operations and groupby aggregations
+* [Matplotlib Gallery](https://matplotlib.org/stable/gallery/index.html) - Helped me design the bar chart visualization
+* [Basketball Reference](https://www.basketball-reference.com/) - Source for understanding NBA statistics and data structure
+* [Real Python - Pandas Tutorial](https://realpython.com/pandas-python-explore-dataset/) - Great for learning practical data analysis workflows
 
 # Future Work
 
-**Data Analysis Enhancements:**
-* Add analysis for additional performance metrics like Player Efficiency Rating (PER), True Shooting Percentage (TS%), or Win Shares
-* Implement filtering by position (PG, SG, SF, PF, C) to compare players within their roles
-* Create time-series analysis to track how scoring and team performance have evolved across different eras of basketball
-* Add defensive statistics analysis (steals, blocks, defensive rating) to complement offensive metrics
+Things I want to add or improve:
 
-**Technical Improvements:**
-* Implement error handling for edge cases (empty datasets, malformed CSV files)
-* Add command-line arguments to allow users to specify custom filters (year range, team, minimum games played)
-* Create additional visualizations: scatter plots for PPG vs. shooting efficiency, heatmaps for team comparisons
-* Optimize performance for larger datasets using chunking or parallel processing
-* Export analysis results to formatted PDF reports
-
-**Feature Additions:**
-* Build an interactive web dashboard using Plotly or Streamlit for dynamic data exploration
-* Add player comparison functionality to analyze head-to-head statistics
-* Implement predictive modeling to forecast player performance based on historical trends
-* Create correlation analysis between different stats (e.g., does higher usage rate correlate with lower efficiency?)
+* Expand analysis to include defensive statistics (steals, blocks, defensive rating) to get a complete picture of player value
+* Add position-based filtering so I can compare players within their roles (PG vs PG, C vs C)
+* Create time-series visualizations to see how scoring trends have evolved across different NBA eras
+* Implement command-line arguments to let users specify custom filters without editing the code
+* Build interactive charts using Plotly instead of static Matplotlib images
+* Add correlation analysis to explore relationships between different stats (does higher usage correlate with lower efficiency?)
