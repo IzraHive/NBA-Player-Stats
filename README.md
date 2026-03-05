@@ -19,7 +19,7 @@ By developing this analytical tool, I'm strengthening my skills in data manipula
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/CSE310_NBA_Stats_Analysis.git
+git clone https://github.com/IzraHive/CSE310_NBA_Stats_Analysis.git
 cd CSE310_NBA_Stats_Analysis
 
 # Install required libraries
@@ -126,4 +126,5 @@ Things I want to add or improve:
 * Create time-series visualizations to see how scoring trends have evolved across different NBA eras
 * Implement command-line arguments to let users specify custom filters without editing the code
 * Build interactive charts using Plotly instead of static Matplotlib images
+
 * Add correlation analysis to explore relationships between different stats (does higher usage correlate with lower efficiency?)
